@@ -1,0 +1,30 @@
+.animated-text {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.char.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: pulse-text 3s infinite;
+}
+
+@keyframes pulse-text {
+  0% {
+    text-shadow: 0 0 2px rgba(247, 192, 29, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(247, 192, 29, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(247, 192, 29, 0.3);
+  }
+}
